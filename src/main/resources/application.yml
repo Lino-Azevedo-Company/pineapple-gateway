@@ -1,0 +1,8 @@
+# ==============================================
+# Zuul Routes config
+# ==============================================
+zuul:
+  routes:
+    products:
+      path: /api/products/**
+      url: ${PRODUCT_SERVICE_URL}
