@@ -2,7 +2,14 @@
 # Zuul Routes config
 # ==============================================
 zuul:
+  sensitiveHeaders: Cookie, Set-Cookie
   routes:
     products:
       path: /api/products/**
       url: ${PRODUCT_SERVICE_URL}
+    oauth:
+      path: /oauth/**
+      url: ${OAUTH_SERVICE_URL}
+    oauthResource:
+      path: /oauth-resource/**
+      url: ${OAUTH_RESOURCE_URL}
